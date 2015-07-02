@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Medium korea font",
+    "description": "change medium font-family for korean user",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background" : {
+       "scripts": ["background.js"],
+       "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://medium.com/*", "https://medium.com/*"],
+            "css": ["korea_font_family.css"],
+            "js": ["content.js"]
+        }
+    ],
+    "page_action": {
+        "default_icon": "icon.png",
+        "default_title": "Medium korea font"
+    },
+    "permissions": [ "declarativeContent", "fontSettings" ]
+}
