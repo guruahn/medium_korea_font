@@ -1,9 +1,6 @@
-window.addEventListener("load", function() {
-    chrome.extension.sendMessage({
-        type: "dom-loaded", 
-        data: {
-            myProperty: "나눔 고딕, 맑은 고딕"
-        }
-    });
-}, true);
-
+WebFont.load({
+	custom: {
+        families: ['Nanum Gothic'],
+        urls: ['//fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+});

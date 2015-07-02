@@ -13,7 +13,7 @@
         {
             "matches": ["http://medium.com/*", "https://medium.com/*"],
             "css": ["korea_font_family.css"],
-            "js": ["content.js"]
+            "js": ["webfont.js","content.js"]
         }
     ],
     "page_action": {
