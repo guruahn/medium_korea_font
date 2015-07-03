@@ -4,4 +4,4 @@
 
 ## Get Started
 
-
+[확장도구 설치하기](https://chrome.google.com/webstore/detail/medium-korea-font/kokpfknnegehljlpmbddjhlmbcbbmpbh)
