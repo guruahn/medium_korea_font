@@ -3,7 +3,7 @@
     
     "name": "Medium korea font",
     "description": "change medium font-family for korean user",
-    "version": "1.0",
+    "version": "1.2",
     "manifest_version": 2,
     "background" : {
        "scripts": ["background.js"],

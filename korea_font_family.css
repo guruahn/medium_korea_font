@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-.is-languageTier3 .postArticle-content, 
-.is-languageTier3 .graf--blockquote, 
-.is-languageTier3 .graf--pullquote, 
-.is-languageTier3 .imageCaption{
-	font-family: "Nanum Gothic", 맑은 고딕,Georgia,Cambria,"Times New Roman",Times,serif !important;
+article[lang=ko] .postArticle-content, 
+article[lang=ko] .graf--blockquote, 
+article[lang=ko] .graf--pullquote, 
+article[lang=ko] .imageCaption{
+    font-family: "Nanum Gothic", 맑은 고딕,Georgia,Cambria,"Times New Roman",Times,serif !important;
 }
