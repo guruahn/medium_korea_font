@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 article[lang=ko] .postArticle-content,
-article[lang=ko] .postArticle-content .graf--p, 
+article[lang=ko] .postArticle-content .graf--p,
+article[lang=ko] .postArticle-content .graf--li, 
 article[lang=ko] .graf--blockquote, 
 article[lang=ko] .graf--pullquote, 
 article[lang=ko] .imageCaption{
