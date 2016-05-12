@@ -5,6 +5,7 @@ article[lang=ko] .postArticle-content .graf--p,
 article[lang=ko] .postArticle-content .graf--li, 
 article[lang=ko] .graf--blockquote, 
 article[lang=ko] .graf--pullquote, 
-article[lang=ko] .imageCaption{
+article[lang=ko] .imageCaption,
+article[lang=ko] .graf--li{
     font-family: "Nanum Gothic", 맑은 고딕,Georgia,Cambria,"Times New Roman",Times,serif !important;
 }
