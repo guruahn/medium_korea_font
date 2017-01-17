@@ -16,8 +16,13 @@ var rule1 = {
 			pageUrl: { urlContains: 'medium.com', schemes: ['https'] }
 		})
 	],
-	actions: [ 
+	actions: [
 		new chrome.declarativeContent.ShowPageAction()
-		
+
 	]
 };
+
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+   chrome.tabs.create({ "url": "chrome://extensions/?options=" + chrome.runtime.id });
+});

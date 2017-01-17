@@ -1,11 +1,57 @@
 @charset "utf-8";
 
-article[lang=ko] .postArticle-content,
-article[lang=ko] .postArticle-content .graf--p,
-article[lang=ko] .postArticle-content .graf--li, 
-article[lang=ko] .graf--blockquote, 
-article[lang=ko] .graf--pullquote, 
-article[lang=ko] .imageCaption,
-article[lang=ko] .graf--li{
-    font-family: "Nanum Gothic", 맑은 고딕,Georgia,Cambria,"Times New Roman",Times,serif !important;
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/notosanskr.css') /* ... */;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic', serif;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/nanumgothic.css') /* ... */;
+}
+
+@font-face {
+  font-family: 'Jeju Myeongjo', serif;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/jejumyeongjo.css') /* ... */;
+}
+
+@font-face {
+  font-family: 'KoPub Batang', serif;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/kopubbatang.css') /* ... */;
+}
+
+article[lang=ko].NotoSansKR .postArticle-content,
+article[lang=ko].NotoSansKR .graf--p,
+article[lang=ko].NotoSansKR .graf--blockquote,
+article[lang=ko].NotoSansKR .graf--pullquote,
+article[lang=ko].NotoSansKR .imageCaption,
+article[lang=ko].NotoSansKR .graf--li{
+    font-family: "Noto Sans KR", 맑은 고딕, sans-serif, Georgia, Cambria, "Times New Roman", Times; !important;
+}
+
+article[lang=ko].NanumGothic .postArticle-content,
+article[lang=ko].NanumGothic .graf--p,
+article[lang=ko].NanumGothic .graf--blockquote,
+article[lang=ko].NanumGothic .graf--pullquote,
+article[lang=ko].NanumGothic .imageCaption,
+article[lang=ko].NanumGothic .graf--li{
+    font-family: "Nanum Gothic", 맑은 고딕, Georgia, Cambria, "Times New Roman", Times, serif !important;
+}
+
+article[lang=ko].JejuMyeongjo .postArticle-content,
+article[lang=ko].JejuMyeongjo .graf--p,
+article[lang=ko].JejuMyeongjo .graf--blockquote,
+article[lang=ko].JejuMyeongjo .graf--pullquote,
+article[lang=ko].JejuMyeongjo .imageCaption,
+article[lang=ko].JejuMyeongjo .graf--li{
+    font-family: "Jeju Myeongjo", 맑은 고딕, Georgia, Cambria, "Times New Roman", Times, serif !important;
+}
+
+article[lang=ko].KoPubBatang .postArticle-content,
+article[lang=ko].KoPubBatang .graf--p,
+article[lang=ko].KoPubBatang .graf--blockquote,
+article[lang=ko].KoPubBatang .graf--pullquote,
+article[lang=ko].KoPubBatang .imageCaption,
+article[lang=ko].KoPubBatang .graf--li{
+    font-family: "KoPub Batang", 맑은 고딕, Georgia, Cambria, "Times New Roman", Times, serif !important;
 }
