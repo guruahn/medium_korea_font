@@ -3,7 +3,7 @@
 
     "name": "Medium korea font",
     "description": "change medium font-family for korean user",
-    "version": "2.0",
+    "version": "2.1",
     "background" : {
        "scripts": ["background.js"],
        "persistent": false
@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "matches": ["http://medium.com/*", "https://medium.com/*"],
-            "css": ["korea_font_family.css"],
+            "css": ["korea_font_family.css", "fonts/nanumgothic.css", "fonts/jejumyeongjo.css", "fonts/notosanskr.css", "fonts/kopubbatang.css"],
             "js": ["content.js"]
         }
     ],
@@ -24,7 +24,7 @@
         "chrome_style": true,
         "open_in_tab": true
     },
-    "web_accessible_resources":["fonts/*.*"],
+    "web_accessible_resources":["fonts/*"],
     "permissions": [ "declarativeContent", "fontSettings", "storage", "contextMenus", "activeTab" ],
     "icons": { "16": "icon-16.png",
            "48": "icon-48.png",

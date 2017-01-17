@@ -1,14 +1,9 @@
-var script=document.createElement('script');
-script.onload=function() { /*do something in the page after the script was loaded*/ };
-script.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-document.body.appendChild(script);
 
-window.addEventListener('storage', function(e) {
-  console.log('storage changed!!!')
-  changeStyle()
-});
 document.addEventListener('DOMContentLoaded', changeStyle());
 
+chrome.storage.onChanged.addListener(function(changes, area) {
+  changeStyle()
+});
 
 var fonts = {
 	'NotoSansKR' : { 'family':'Noto Sans KR', 'urls':'https://fonts.googleapis.com/earlyaccess/notosanskr.css'},
@@ -17,26 +12,31 @@ var fonts = {
   'KoPubBatang' : { 'family':'KoPub Batang', 'urls':'http://fonts.googleapis.com/earlyaccess/kopubbatang.css'}
 }
 
-chrome.storage.onChanged.addListener(function(changes, area) {
-  changeStyle()
-});
+
 
 function changeStyle(){
-  //console.log('changeStyle!!')
+  console.log('changeStyle!!')
 	chrome.storage.sync.get({
-		font: 'NotoSansKR'
+		font: 'NanumGothic'
 	}, function(items) {
-		//console.log(fonts[items.font].family);
+		
+		//Article
+		$body = document.querySelectorAll('body');
+		//reset classList
+		if( $body.length > 0 ){
+			removeFontClass($body[0]);
+			$body[0].classList.add(items.font);
+		}
 
-		$article = document.querySelectorAll('article[lang=ko]');
-
-		//remove classList
-		//console.log(articleClass)
-		$article[0].classList.remove("NotoSansKR");
-		$article[0].classList.remove("NanumGothic");
-    $article[0].classList.remove("JejuMyeongjo");
-    $article[0].classList.remove("KoPubBatang");
-
-		$article[0].classList.add(items.font);
 	});
+}
+
+function removeFontClass($obj){
+	if(typeof $obj != 'undefined'){
+		console.log($obj)
+		$obj.classList.remove("NotoSansKR");
+		$obj.classList.remove("NanumGothic");
+		$obj.classList.remove("JejuMyeongjo");
+		$obj.classList.remove("KoPubBatang");
+	}
 }
